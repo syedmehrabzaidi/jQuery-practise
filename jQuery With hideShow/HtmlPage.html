@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="jquery-3.2.1.min.js"></script>
+
+    <style>
+
+        .xyz {        
+            background:#eabc00;
+            color:#fff !important;
+        }
+
+        .blue {
+        
+            background:#147cc4 !important;
+        
+        }
+
+    </style>
+
+    <script>
+
+
+        $(document).ready(function () {
+            
+            $(".steptwo").hide();
+            $("#first").click(function () {
+
+                var value = $(this).attr("tayyab");
+                $("#second").html("");
+                $("#second").html(value);
+
+            });
+            $("#btnSubmit").click(function () {
+
+            var fname = $("#fname").val();
+            var lname = $("#lname").val();
+            var age = $("#age").val();
+            var email = $("#email").val();
+            var matric = $("#matric").val();
+            var inter = $("#inter").val();
+            var graduation = $("#graduation").val();
+            $("#third").show();
+            $("#fourth").show();
+            $(".stepone").hide();
+            $(".steptwo").show();
+            $("#fourth").html("First Name"+fname + "<br/>"+ "Lastname" + lname + "<br/> "+" Age " + age + "<br/> " +"Email"+ email);
+            $("#fourth").hide();
+
+            });
+
+             $("#btnSubmit1").click(function () {
+
+            var matric = $("#matric").val();
+            var inter = $("#inter").val();
+            var graduation = $("#graduation").val();
+            
+
+            $(".steptwo").hide();
+            $(".stepone").hide();
+
+            $("#education").html("Matric"+matric + "<br/>"+ "Intermediate" + inter + "<br/> "+" Graduation " + graduation + "<br/>");
+            });
+    
+
+
+
+
+
+        });
+
+
+
+    </script>
+
+</head>
+<body>
+    <div id="first" tayyab="dummy information">Basic Resume Using jQuery</div>
+    <div id="fourth" class="blue">Fourth</div>
+    <div id="education" class="blue"><h1>Basic Education</h1></div>
+    <div id="stepone">
+    <input type="text" id="fname"/>
+    <input type="text" id="lname" />
+    <input type="text" id="age" />
+    <input type="text" id="email" />
+    <input type="submit" id="btnSubmit" />
+    </div>
+
+    <div id="steptwo">
+    <h1>Enter your education</h1>
+    <input type="text" id="matric"/>
+    <input type="text" id="inter" />
+    <input type="text" id="graduation" />
+    <input type="submit" id="btnSubmit1" />
+    </div>
+
+
+    
+
+</body>
+</html>

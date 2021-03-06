@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+        
+    <div id="firstDiv"><div>Hello</div><div>World</div></div>
+    <div id="SecondDiv">Extra Value</div>
+
+    <input type="submit" id="ClickMe" value="Click Me!"/>
+
+
+    <script>
+        
+        $(document).ready(function() {
+
+            $("#SecondDiv").click(function() {
+
+                alert("check!");
+
+            });
+
+        });
+
+    </script>
+
+   
+</body>
+</html>
